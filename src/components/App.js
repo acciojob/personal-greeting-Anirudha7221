@@ -1,11 +1,11 @@
 
 import React from "react";
 import './../styles/App.css';
-import {usestate} from "react";
+import {useState} from "react";
 
 const App = () => {
 
-  const [name,setName]=usestate('');
+  const [name,setName]=useState('');
   return (
     <div>
         {/* Do not remove the main div */}
