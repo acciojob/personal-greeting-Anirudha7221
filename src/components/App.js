@@ -8,22 +8,20 @@ const App = () => {
   const handleNameChange = (event) => {
     setNmae(event.target.value);
   };
-  return (
     <div>
-         <h2>Enter your name:</h2>
-    <label>
-        <input>
-           type="text"
-           value={name}
-             onChange={handleNameChange}
-               placeholder="Enter your name"
-                 />
-                 </label>
-  {name && (
-    <p>Hello {name} !</p>
-    )}
+      <label htmlFor="inputName">Enter your name:</label>
+      <br />
+      <input
+        type="text"
+        id="inputName"
+        onChange={(e) => {
+          setName(e.target.value);
+        }}
+      />
+      <br />
+      <p>{name ? `Hello ${name}!` : ""}</p>
     </div>
-  )
+  );
 }
 
 export default App
